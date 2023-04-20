@@ -9,6 +9,9 @@ admin_id =
 group_id =
 #group name, enter token between " token "
 # this name will not automatically add in start message. you have to enter your group name in it automatically
-group_name = "
+group_name = " "
+#group status, either True or False.
+#carefull of capital letters. T and F must be capital
+group_status= False
 #start message, must enter your start message between " message "
 start_message = " "
