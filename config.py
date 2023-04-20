@@ -1,3 +1,6 @@
+#Made by anonymous-1001 (github)
+#version == 0.1.3
+#new update : coming soon
 #Your bot token, enter token between " token "
 Token = " "
 #add your chat id
