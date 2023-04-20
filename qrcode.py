@@ -1,9 +1,10 @@
 import pyqrcode
 import png
 from pyqrcode import QRCode
+from config import *
 
 # String which represents the QR code
-s = "https://t.me/+MAPPF1kc8ecyYmI1"
+s = link
 # Generate QR code
 url = pyqrcode.create(s)
 # Create and save the svg file naming "myqr.svg"
