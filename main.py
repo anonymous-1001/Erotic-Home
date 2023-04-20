@@ -18,7 +18,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s - %(name)s', level=logging
 
 @dp.message_handler(commands=['start'])
 async def welcome(message : types.Message):
-    await message.reply("Hello, i am bot for the private use of group Multiverse\n use /join to group link.")
+    await message.reply(start_message)
 
 @dp.message_handler(commands=["help"])
 async def help(message : types.Message):
