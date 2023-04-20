@@ -40,9 +40,7 @@ async def status(message : types.Message):
   else :
     await message.reply(f"The current status of group is : Banned")
 
-@dp.message_handler(commands=['story'])
-async def stories(message : types.Message):
-  await message.reply(random.choice(story))
+
 @dp.message_handler()
 async def message(message : types.Message):
   logging.info(f"{message.from_user.first_name} ({message.chat.id}, {message.from_user.username}):{message.text}")
