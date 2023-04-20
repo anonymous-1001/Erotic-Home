@@ -13,5 +13,7 @@ group_name = " "
 #group status, either True or False.
 #carefull of capital letters. T and F must be capital
 group_status= False
+#group link
+group_link = " "
 #start message, must enter your start message between " message "
 start_message = " "
