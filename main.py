@@ -43,16 +43,18 @@ async def status(message : types.Message):
 
 @dp.message_handler()
 async def message(message : types.Message):
-  logging.info(f"{message.from_user.first_name} ({message.chat.id}, {message.from_user.username}):{message.text}")
-  
-@dp.message_handler()
-async def admin(message: types.Message):
-  global adminid
-  adminid = message.chat.id
-  if adminid == admin_id:
-    await bot.send_message(chat_id=group_id,text=message.text'
-    await message.reply("message is send")
-
+  time=datetime.datetime.now()
+  if admin==config.admin_id:
+    for j in config.listid:
+      try :
+        await bot.send_message(chat_id=j,text=message.text)
+      except Exception as e:
+        print(e)
+    await bot.send_message(chat_id=message.chat.id, text="Message send")
+  else :
+    logging.info(f"{message.from_user.first_name} ({message.chat.id} {message.from_user.username}): {message.text}")
+    file=open("chat_log.txt","a")
+    file.write(f"{time} - {message.from_user.first_name} ({message.chat.id} {message.from_user.username}): {message.t
 keep_alive.keep_alive()
 try :
   if __name__=="__main__": 
