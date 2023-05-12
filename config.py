@@ -5,6 +5,9 @@
 Token = " "
 #add your chat id
 admin_id = 
+#key (made your own) if you want to set a key that approve request apply by users to your group.
+#user must apply before sending key
+key=" "
 #Your group id
 group_id =
 #group name, enter token between " token "
