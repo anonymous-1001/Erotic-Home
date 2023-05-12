@@ -51,13 +51,14 @@ async def message(message : types.Message):
       except Exception as e:
         print(e)
     await bot.send_message(chat_id=message.chat.id, text="Message send")
-  if message.text==config.key:
-    id=str(message.chat.id)
-    if id[0]!="-":
-        await bot.send_message(chat_id=message.chat.id,text=config.group_link)
-        logging.info(f"{message.from_user.username} requested for {config.group_name}.")
-        file = open("chat_log.txt","a")
-        file.write(f"{time} - {message.from_user.username} requested for the {config.group_name}")                    
+  if config.key!=" " and config.key!="":      
+    if message.text==config.key:
+        id=str(message.chat.id)
+        if id[0]!="-":
+            await bot.send_message(chat_id=message.chat.id,text=config.group_link)
+            logging.info(f"{message.from_user.username} requested for {config.group_name}.")
+            file = open("chat_log.txt","a")
+            file.write(f"{time} - {message.from_user.username} requested for the {config.group_name}")                    
   else :
     logging.info(f"{message.from_user.first_name} ({message.chat.id} {message.from_user.username}): {message.text}")
     file=open("chat_log.txt","a")
