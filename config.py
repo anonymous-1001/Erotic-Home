@@ -1,10 +1,15 @@
 #Made by anonymous-1001 (github)
-#version == 0.1.3
+#version == 0.1.4
 #new update : coming soon
 #Your bot token, enter token between " token "
 Token = " "
 #add your chat id
 admin_id = 
+#key if you want users to be approve by bot.
+#key is of your choice. make random key and add below.
+#if a user send key to bot after apply in group then bot will add them in the group.
+#user must apply before sending key
+key=" "
 #Your group id
 group_id =
 #group name, enter token between " token "
