@@ -8,7 +8,7 @@ import random
 from stories import *
 from config import *
 
-version = 0.1.3
+#version = 0.1.4
 
 bot = Bot(token=Token)
 dp = Dispatcher(bot)
@@ -51,6 +51,14 @@ async def message(message : types.Message):
       except Exception as e:
         print(e)
     await bot.send_message(chat_id=message.chat.id, text="Message send")
+  if config.key!="" and config.key!=" ":
+    if message.text==config.key:
+        id=str(message.chat.id)
+        if id[0]!="-":
+          await bot.approve_chat_member(chat_id=config.group_id,user_id=message.chat.id)
+          logging.info(f"{message.from_user.username} approved in {config.group_name}.")
+          file = open("chat_log.txt","a")
+          file.write(f"{time} - {message.from_user.username} approved in {config.group_name}")
   else :
     logging.info(f"{message.from_user.first_name} ({message.chat.id} {message.from_user.username}): {message.text}")
     file=open("chat_log.txt","a")
