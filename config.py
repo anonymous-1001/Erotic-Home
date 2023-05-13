@@ -2,6 +2,7 @@
 #version == 0.1.4
 #new update : coming soon
 #Your bot token, enter token between " token "
+#run main.py in your python to start bot
 Token = " "
 #add your chat id
 admin_id = 
